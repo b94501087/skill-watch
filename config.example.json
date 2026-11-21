@@ -1,0 +1,8 @@
+{
+  "minRepeats": 3,
+  "longSequenceSteps": 8,
+  "nudgeCooldownMs": 1800000,
+  "maxNudgesPerSession": 2,
+  "llmEnabled": false,
+  "llmEndpoint": null
+}

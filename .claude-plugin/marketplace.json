@@ -1,0 +1,14 @@
+{
+  "name": "skill-watch-local",
+  "description": "Local skill-watch marketplace",
+  "owner": {
+    "name": "skill-watch"
+  },
+  "plugins": [
+    {
+      "name": "skill-watch",
+      "description": "Detects repeated workflows and suggests converting them to skills",
+      "source": "./"
+    }
+  ]
+}

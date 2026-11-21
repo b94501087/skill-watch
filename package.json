@@ -1,0 +1,19 @@
+{
+  "name": "skill-watch",
+  "version": "1.0.0",
+  "description": "Detects repeated workflows and suggests converting them to skills",
+  "main": "lib/skill-drafter.js",
+  "scripts": {
+    "test": "node tests/run-tests.js",
+    "lint": "echo 'No lint configured'"
+  },
+  "keywords": [
+    "claude-code",
+    "plugin",
+    "workflow",
+    "skill",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT"
+}

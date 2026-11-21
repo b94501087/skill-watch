@@ -1,0 +1,12 @@
+{
+  "name": "skill-watch",
+  "version": "1.0.0",
+  "description": "Detects repeated workflows and suggests converting them to skills",
+  "author": {
+    "name": "skill-watch contributors"
+  },
+  "license": "MIT",
+  "hooks": [
+    "./hooks/hooks.json"
+  ]
+}
