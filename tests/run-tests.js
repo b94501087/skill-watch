@@ -156,8 +156,8 @@ async function main() {
   test('three similar sessions nudge on the third run via stdin hooks', () => {
     clearData();
     const tools = [
-      { tool_name: 'Read', tool_input: { file_path: '/home/box/example.env' } },
-      { tool_name: 'Edit', tool_input: { file_path: '/home/box/example.env' } },
+      { tool_name: 'Read', tool_input: { file_path: '/home/user/example.env' } },
+      { tool_name: 'Edit', tool_input: { file_path: '/home/user/example.env' } },
       { tool_name: 'Bash', tool_input: { command: 'npm test' } },
     ];
 
@@ -193,13 +193,13 @@ async function main() {
     const current = loadSession('s3');
     const logged = JSON.stringify(current) + JSON.stringify(getStatus());
     assert(!logged.includes('sk_live_1234567890abcdefghij'), 'raw key leaked into logs');
-    assert(!logged.includes('/home/box/example.env'), 'raw path leaked into logs');
+    assert(!logged.includes('/home/user/example.env'), 'raw path leaked into logs');
 
     const drafted = draftSkill('fix-tests');
     assert(drafted.success, drafted.error);
     const body = fs.readFileSync(drafted.path, 'utf8');
     assert(!body.includes('sk_live'), 'draft leaked key');
-    assert(!body.includes('/home/box/example.env'), 'draft leaked path');
+    assert(!body.includes('/home/user/example.env'), 'draft leaked path');
     assert(body.includes('name: fix-tests'));
   });
 
